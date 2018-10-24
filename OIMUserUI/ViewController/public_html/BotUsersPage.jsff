@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout binding="#{backingBeanScope.backing_BotUsersPage.pgl1}"
+                       id="pgl1">
+    <af:panelHeader text="Create User"
+                    binding="#{backingBeanScope.backing_BotUsersPage.ph1}"
+                    id="ph1">
+      <f:facet name="toolbar">
+        <af:group id="g1" rendered="true">
+          <af:commandToolbarButton text="Submit" id="ctb1"
+                                   actionListener="#{backingBeanScope.backing_BotUsersPage.submitActionListener}"/>
+          <af:spacer width="10" height="10"
+                     binding="#{backingBeanScope.backing_BotUsersPage.s2}"
+                     id="s2"/>
+          <af:commandToolbarButton text="Cancel" id="ctb2" action="Home"/>
+        </af:group>
+      </f:facet>
+      <af:spacer width="10" height="10"
+                 binding="#{backingBeanScope.backing_BotUsersPage.s1}" id="s1"/>
+      <af:showDetailHeader text="Request Information" disclosed="true"
+                           binding="#{backingBeanScope.backing_BotUsersPage.sdh1}"
+                           id="sdh1">
+        <af:panelFormLayout binding="#{backingBeanScope.backing_BotUsersPage.pfl1}"
+                            id="pfl1">
+          <af:inputText label="BOT First Name"
+                        binding="#{backingBeanScope.backing_BotUsersPage.it2}"
+                        id="it2" showRequired="false"/>
+          <af:inputText label="BOT Last Name"
+                        binding="#{backingBeanScope.backing_BotUsersPage.it1}"
+                        id="it1" showRequired="true"/>
+          <af:inputText label="Supervisor's Corp ID / LANID"
+                        binding="#{backingBeanScope.backing_BotUsersPage.it3}"
+                        id="it3" showRequired="true"/>
+          <af:inputText label="ProcessID"
+                        binding="#{backingBeanScope.backing_BotUsersPage.it4}"
+                        id="it4" showRequired="true"/>
+          <af:inputText label="BOTID"
+                        binding="#{backingBeanScope.backing_BotUsersPage.it5}"
+                        id="it5" showRequired="true"/>
+        </af:panelFormLayout>
+      </af:showDetailHeader>
+    </af:panelHeader>
+  </af:panelGroupLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_BotUsersPage-->
+</jsp:root>

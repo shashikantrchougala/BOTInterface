@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/BotUsersPage.jsff" usageId="view_BotUsersPagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_BotUsersPagePageDef"
+          path="view.pageDefs.BotUsersPagePageDef"/>
+  </pageDefinitionUsages>
+</Application>

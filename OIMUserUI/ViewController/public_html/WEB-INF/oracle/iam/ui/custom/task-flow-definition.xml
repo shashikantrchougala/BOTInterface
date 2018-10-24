@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="task-flow-definition">
+    <default-activity id="__1">BotUsers</default-activity>
+    <managed-bean id="__11">
+      <managed-bean-name id="__10">backing_BotUsersPage</managed-bean-name>
+      <managed-bean-class id="__9">view.backing.BotUsersPage</managed-bean-class>
+      <managed-bean-scope id="__8">backingBean</managed-bean-scope>
+      <!--oracle-jdev-comment:managed-bean-jsp-link:1BotUserPage.jsff-->
+    </managed-bean>
+    <view id="BotUsers">
+      <page>/BotUsersPage.jsff</page>
+    </view>
+    <task-flow-return id="HomePage">
+      <outcome id="__2">
+        <name>HomePage</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__3">
+      <from-activity-id id="__4">BotUsers</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome id="__7">Home</from-outcome>
+        <to-activity-id id="__5">HomePage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
